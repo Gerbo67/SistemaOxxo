@@ -12,6 +12,7 @@ private:
 public:
 	// Constructor
 	Cliente(string, int, int, string);
+	Cliente();
 
 	// Getters
 	string getNombre();

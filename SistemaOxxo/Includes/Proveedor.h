@@ -1,21 +1,21 @@
 #pragma once
 #include "Prerequisites.h";
-#include "Producto.h"
 
 class Proveedor
 {
 private:
-	string m_marca;
-	vector<Producto> m_productos;
+	int m_id;
+	string m_nombre;
 public:
 	// Constructor
-	Proveedor(string, vector<Producto>);
+	Proveedor(string _nombre, int _id);
+	Proveedor();
 
 	// Getters
 	string getMarca();
-	vector<Producto> getProductos();
+	int getId();
 
 	// Setters
 	void setMarca(string);
-	void setProductos(vector<Producto>);
+	void setId(int _id);
 };

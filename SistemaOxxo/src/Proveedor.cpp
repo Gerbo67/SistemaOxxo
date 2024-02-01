@@ -1,28 +1,32 @@
 #include "Proveedor.h"
 #include "Prerequisites.h";
 
-Proveedor::Proveedor(string _marca, vector<Producto> _productos)
+Proveedor::Proveedor(string _nombre, int _id)
 {
-	m_marca = _marca;
-	m_productos = _productos;
+	m_nombre = _nombre;
+	m_id = _id;
+}
+
+Proveedor::Proveedor()
+{
 }
 
 string Proveedor::getMarca()
 {
-	return m_marca;
+	return m_nombre;
 }
 
-vector<Producto> Proveedor::getProductos()
+int Proveedor::getId()
 {
-	return m_productos;
+	return m_id;
 }
 
-void Proveedor::setMarca(string _marca)
+void Proveedor::setMarca(string _nombre)
 {
-	m_marca = _marca;
+	m_nombre = _nombre;
 }
 
-void Proveedor::setProductos(vector<Producto> _productos)
+void Proveedor::setId(int _id)
 {
-	m_productos = _productos;
+	m_id = _id;
 }

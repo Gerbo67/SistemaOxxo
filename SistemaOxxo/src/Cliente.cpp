@@ -8,6 +8,10 @@ Cliente::Cliente(string _nombre, int _puntos, int _telefono, string _email)
 	m_email = _email;
 }
 
+Cliente::Cliente()
+{
+}
+
 string Cliente::getNombre()
 {
 	return m_nombre;
