@@ -4,21 +4,22 @@
 #include "Producto.h"
 #include "Proveedor.h"
 
-class Sistema : public Cliente, public Producto, public Proveedor
+class Sistema
 {
+private:
+	vector<Cliente> m_clientes;
+	vector<Producto> m_productos;
+	vector<Proveedor> m_proveedores;
+
 public:
-	// Registra un nuevo cliente
-	void registrarCliente(string nombre, int puntos, int telefono, string email) {
-		Cliente(nombre, puntos, telefono, email);
-	};
 
-	// Registra un nuevo producto
-	void registrarProducto(string nombre, int tipoMedida, int cantidad) {
-		Producto(nombre, tipoMedida, cantidad);
-	};
+	// Setters
+	void setClientes(vector<Cliente>);
+	void setProductos(vector<Producto>);
+	void setProveedores(vector<Proveedor>);
 
-	// Registra un nuevo proveedor
-	void registrarProveedor(string marca, vector<Producto> productos) {
-		Proveedor(marca, productos);
-	};
+	// Getters
+	vector<Cliente> getClientes();
+	vector<Producto> getProductos();
+	vector<Proveedor> getProveedores();
 };

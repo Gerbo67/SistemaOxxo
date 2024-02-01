@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./Includes/;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,7 +128,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SistemaOxxo.cpp" />
+    <ClInclude Include="Includes\Cliente.h" />
+    <ClInclude Include="Includes\Prerequisites.h" />
+    <ClInclude Include="Includes\Producto.h" />
+    <ClInclude Include="Includes\Proveedor.h" />
+    <ClInclude Include="Includes\Sistema.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Cliente.cpp" />
+    <ClCompile Include="src\Producto.cpp" />
+    <ClCompile Include="src\Proveedor.cpp" />
+    <ClCompile Include="src\Sistema.cpp" />
+    <ClCompile Include="src\SistemaOxxo.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

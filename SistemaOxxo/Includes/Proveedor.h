@@ -5,21 +5,17 @@
 class Proveedor
 {
 private:
-	string marca;
-	vector<Producto> productos;
+	string m_marca;
+	vector<Producto> m_productos;
 public:
-	Proveedor(string marca, vector<Producto> productos) : marca(marca), productos(productos) {};
+	// Constructor
+	Proveedor(string, vector<Producto>);
 
-	string getMarca() {
-		return marca;
-	};
-	vector<Producto> getProductos() {
-		return productos;
-	};
-	void setMarca(string marca) {
-		this->marca = marca;
-	};
-	void setProductos(vector<Producto> productos) {
-		this->productos = productos;
-	};
+	// Getters
+	string getMarca();
+	vector<Producto> getProductos();
+
+	// Setters
+	void setMarca(string);
+	void setProductos(vector<Producto>);
 };
