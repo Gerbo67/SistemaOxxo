@@ -4,6 +4,7 @@
 class Cliente
 {
 private:
+	int m_id;
 	string m_nombre;
 	int m_puntos;
 	int m_telefono;
@@ -11,18 +12,19 @@ private:
 
 public:
 	// Constructor
-	Cliente(string, int, int, string);
-	Cliente();
+	Cliente(int _id, string _nombre, int _puntos, int _telefono, string _email);
 
 	// Getters
+	int getId();
 	string getNombre();
 	int getPuntos();
 	int getTelefono();
 	string getEmail();
 
 	// Setters
-	void setNombre(string);
-	void setPuntos(int);
-	void setTelefono(int);
-	void setEmail(string);
+	void setId(int _id);
+	void setNombre(string _nombre);
+	void setPuntos(int _puntos);
+	void setTelefono(int _telefono);
+	void setEmail(string _email);
 };

@@ -5,24 +5,21 @@
 class Producto
 {
 private:
-	Proveedor m_proveedor;
+	int m_id;
 	string m_nombre;
-	int m_tipoMedida;
 	int m_cantidad;
 
 public:
 	// Constructor
-	Producto(Proveedor, string, int, int);
+	Producto(int _id, string _nombre, int _cantidad);
 
 	// Getters
-	Proveedor getProveedor();
+	int getId();
 	string getNombre();
-	int getTipoMedida();
 	int getCantidad();
 
 	// Setters
-	void setProveedor(Proveedor);
-	void setNombre(string);
-	void setTipoMedida(int);
-	void setCantidad(int);
+	void setId(int _id);
+	void setNombre(string _nombre);
+	void setCantidad(int _cantidad);
 };

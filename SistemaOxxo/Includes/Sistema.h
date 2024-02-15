@@ -1,31 +1,29 @@
 #pragma once
 #include "Prerequisites.h";
-#include "Cliente.h"
-#include "Producto.h"
-#include "Proveedor.h"
+#include <Cliente.h>
+#include <Proveedor.h>
 
 class Sistema
 {
 private:
 	vector<Cliente> m_clientes;
-	vector<Producto> m_productos;
 	vector<Proveedor> m_proveedores;
 
 	// Setters
 	void setCliente(Cliente _cliente);
-	void setProducto(Producto);
-	void setProveedor(Proveedor);
-
-	// Getters
-	vector<Cliente> getClientes();
-	vector<Producto> getProductos();
-	vector<Proveedor> getProveedores();
+	void setProducto(Producto _producto, Proveedor _proveedor);
+	void setProveedor(Proveedor _proveedores);
 
 	// Metodos
 	void menu();
-	void registrarClientes();
-	void registrarProveedor();
-	void registrarProducto();
+	void registerClientes();
+	void registerProveedor();
+	void registerProducto();
+	void showClientes();
+	void showProductos();
+	void showProveedores();
+	void deleteCliente();
+	void sellProducto();
 	void progressInitial();
 	void waitChange(int);
 

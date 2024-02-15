@@ -1,15 +1,17 @@
 #include "Cliente.h"
 
-Cliente::Cliente(string _nombre, int _puntos, int _telefono, string _email)
+Cliente::Cliente(int _id, string _nombre, int _puntos, int _telefono, string _email)
 {
+	m_id = _id;
 	m_nombre = _nombre;
 	m_puntos = _puntos;
 	m_telefono = _telefono;
 	m_email = _email;
 }
 
-Cliente::Cliente()
+int Cliente::getId()
 {
+	return m_id;
 }
 
 string Cliente::getNombre()
@@ -30,6 +32,11 @@ int Cliente::getTelefono()
 string Cliente::getEmail()
 {
 	return m_email;
+}
+
+void Cliente::setId(int _id)
+{
+	m_id = _id;
 }
 
 void Cliente::setNombre(string _nombre)

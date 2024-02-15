@@ -1,27 +1,19 @@
-#include "Producto.h"
 #include <Proveedor.h>
 
-Producto::Producto(Proveedor _proveedor, string _nombre, int _tipoMedida, int _cantidad)
+Producto::Producto(int _id, string _nombre, int _cantidad)
 {
-	m_proveedor = _proveedor;
+	m_id = _id;
 	m_nombre = _nombre;
-	m_tipoMedida = _tipoMedida;
 	m_cantidad = _cantidad;
 }
 
-Proveedor Producto::getProveedor()
+int Producto::getId()
 {
-	return m_proveedor;
+	return m_id;
 }
-
 string Producto::getNombre()
 {
 	return m_nombre;
-}
-
-int Producto::getTipoMedida()
-{
-	return m_tipoMedida;
 }
 
 int Producto::getCantidad()
@@ -29,19 +21,14 @@ int Producto::getCantidad()
 	return m_cantidad;
 }
 
-void Producto::setProveedor(Proveedor _proveedor)
+void Producto::setId(int _id)
 {
-	m_proveedor = _proveedor;
+	m_id = _id;
 }
 
 void Producto::setNombre(string _nombre)
 {
 	m_nombre = _nombre;
-}
-
-void Producto::setTipoMedida(int _tipoMedida)
-{
-	m_tipoMedida = _tipoMedida;
 }
 
 void Producto::setCantidad(int _cantidad)
